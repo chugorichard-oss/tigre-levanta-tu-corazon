@@ -56,12 +56,24 @@ h1, h2, h3, h4, .nav-brand {
     object-fit: cover;
     border: 1px solid var(--gold);
 }
+.nav-links {
+    display: flex; gap: 2rem;
+}
+.nav-link {
+    color: #ccc; text-decoration: none; font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem; letter-spacing: 1px; text-transform: uppercase;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--gold); text-shadow: 0 0 10px var(--gold-glow);
+}
 .nav-slogan {
     font-weight: 400; letter-spacing: 4px; font-size: 0.85rem; color: #999;
 }
 @media (max-width: 768px) {
     .nav-slogan { display: none; }
-    .navbar { padding: 1rem; }
+    .navbar { padding: 1rem; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .nav-links { width: 100%; justify-content: center; }
 }
 
 /* Main Layout */
